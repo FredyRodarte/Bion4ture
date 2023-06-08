@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Tsukimi+Rounded:wght@600&display=swap');
+
+/* Cuerpo del index */
+body{
+    background-image: url(../img/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(113, 232, 86);
+}
+
+/* formulario */
+#formulario{
+    margin-top: 25%;
+    border-radius: 15px;
+    background-color: rgba(232, 220, 219, 0.5);
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+#titulo-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#titulo-form h3{
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 55px;
+}
+
+#datos-form{
+    margin: 2% 5% 2% 5%;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}

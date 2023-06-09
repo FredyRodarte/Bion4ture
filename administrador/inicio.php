@@ -1,4 +1,4 @@
-<?php require_once "page_top.php"?>
+<?php require_once "vistas/page_top.php"?>
 
 <!--INICIO del cont principal-->
 <div class="container">
@@ -84,4 +84,4 @@
     
 </div>
 <!--FIN del cont principal-->
-<?php require_once "page_down.php"?>
+<?php require_once "vistas/page_down.php"?>

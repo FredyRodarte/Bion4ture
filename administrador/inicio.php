@@ -5,7 +5,7 @@
     <h1>Contenido principal</h1>
 
 <div class="container">
-        <div class="row">g
+        <div class="row">
             <div class="col-lg-12">            
                 
             </div>    

@@ -2,10 +2,10 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Contenido principal</h1>
+    <h1>Bienvenido Administrador</h1>
 
 <div class="container">
-        <div class="row">g
+        <div class="row">
             <div class="col-lg-12">            
                 
             </div>    

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>BioN4ture - punto de venta</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css"/>
     <!--datables estilo bootstrap 4 CSS-->  
     <link rel="stylesheet"  type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
-    
+    <link rel="icon" href="vendor/img/hoja.ico">
 </head>
 
 <body id="page-top">
@@ -34,48 +34,55 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="inicio.php">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <img src="../vendor/img/logo.png" alt="">
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">BioN4ture</div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
+      
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Menú
+      </div>
+
+      <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" href="usuarios.php">
+        <i class="fa-solid fa-user-secret"></i>
+          <span>Usuarios</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Interface
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.php">Buttons</a>
-            <a class="collapse-item" href="cards.php">Cards</a>
-          </div>
-        </div>
+      <li class="nav-item ">
+        <a class="nav-link" href="productos.php">
+        <i class="fa-solid fa-bottle-water"></i>
+          <span>Productos</span></a>
       </li>
 
+      <hr class="sidebar-divider">
+        
+      <li class="nav-item">
+        <a class="nav-link" href="ventas.php">
+        <i class="fa-regular fa-money-bill-1"></i>
+        <span>Ventas</span></a>
+      </li>
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
 
-    
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+        <i class="fa-solid fa-cash-register"></i>
+        <span>Registrar venta</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

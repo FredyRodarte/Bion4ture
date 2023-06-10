@@ -58,7 +58,9 @@
 <!-- datatables JS -->
 <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>    
 <!-- código propio JS --> 
-<script type="text/javascript" src="main.js"></script>  
+<script type="text/javascript" src="main.js"></script>
+<!-- Iconos -->
+<script src="https://kit.fontawesome.com/e777ccecfb.js" crossorigin="anonymous"></script>  
 
 
 

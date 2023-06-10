@@ -4,6 +4,12 @@
 <div class="container">
     <h1><i class="fa-solid fa-user-secret"></i> Usuarios</h1>
 
+    <?php
+        include_once "bd/conexion.php";
+        $sql="SELECT * FROM usuarios";
+        $usuarios= $pdo->query($sql);
+    ?>
+
 <div class="container">
         <div class="row">
             <div class="col-lg-12">            
@@ -21,20 +27,30 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>País</th>                                
-                                <th>Edad</th>  
+                                <th>Apellido paterno</th>                                
+                                <th>Apellido materno</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>NSS</th>
+                                <th>Usuario</th>
+                                <th>Contraseña</th>
+                                <th>Tipo de usuario</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php                            
-                            foreach($data as $dat) {                                                        
+                            foreach($usuarios as $usuario) {                                                        
                             ?>
                             <tr>
-                                <td><?php echo $dat['id'] ?></td>
-                                <td><?php echo $dat['nombre'] ?></td>
-                                <td><?php echo $dat['pais'] ?></td>
-                                <td><?php echo $dat['edad'] ?></td>    
+                                <td><?php echo $usuario['id_usuario'] ?></td>
+                                <td><?php echo $usuario['nombre_usuario'] ?></td>
+                                <td><?php echo $usuario['apell1_usuario'] ?></td>
+                                <td><?php echo $usuario['apell2_usuario'] ?></td>
+                                <td><?php echo $usuario['fecha_nacimiento'] ?></td>
+                                <td><?php echo $usuario['nss_usuario'] ?></td>
+                                <td><?php echo $usuario['nick_name'] ?></td>
+                                <td><?php echo $usuario['contraseña'] ?></td>
+                                <td><?php echo $usuario['tipo_usuario'] ?></td>   
                                 <td></td>
                             </tr>
                             <?php

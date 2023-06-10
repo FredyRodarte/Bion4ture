@@ -79,7 +79,6 @@
         </div>
     </div>
 </div>  
-      <?php echo "estoy en documento usuarios"; ?>
     
     
 </div>

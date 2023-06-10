@@ -113,5 +113,8 @@
           <div class="navbar-nav ml-auto">
             <p>La fecha del dia de hoy es:</p>
           </div>
+          <div class="navbar">
+            <a class="btn btn-danger" href="../index.php"><i class="fa-solid fa-power-off"></i> Salir</a>
+          </div>
 
         </nav>

@@ -14,11 +14,11 @@
     $usuarios= $pdo->query($sql);
 
     foreach($usuarios as $usuario){
-        echo $usuario["id_usuario"];
+        /*echo $usuario["id_usuario"];
         echo $usuario["nombre_usuario"];
         echo $usuario["nick_name"];
         echo $usuario["contraseña"];
-        echo $usuario["tipo_usuario"];
+        echo $usuario["tipo_usuario"];*/
 
         if ($user == $usuario["nick_name"] && $pasword == $usuario["contraseña"]) {
             

@@ -2,12 +2,12 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Contenido principal</h1>
+    <h1><i class="fa-solid fa-user-secret"></i> Usuarios</h1>
 
 <div class="container">
         <div class="row">
             <div class="col-lg-12">            
-            <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo</button>    
+            <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo usuario</button>    
             </div>    
         </div>    
     </div>    
@@ -79,7 +79,7 @@
         </div>
     </div>
 </div>  
-      
+      <?php echo "estoy en documento usuarios"; ?>
     
     
 </div>

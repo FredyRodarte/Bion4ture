@@ -25,7 +25,7 @@
             </div> 
             
         </div>    
-    </div>    
+</div>    
     <br>  
    
 <!--FIN del cont principal-->

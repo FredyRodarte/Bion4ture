@@ -75,16 +75,40 @@
         <form id="formPersonas">    
             <div class="modal-body">
                 <div class="form-group">
-                <label for="nombre" class="col-form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre">
+                    <label for="nombre" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre">
                 </div>
                 <div class="form-group">
-                <label for="pais" class="col-form-label">País:</label>
-                <input type="text" class="form-control" id="pais">
+                    <label for="apPat" class="col-form-label">Apellido Paterno:</label>
+                    <input type="text" class="form-control" id="apPat">
                 </div>                
                 <div class="form-group">
-                <label for="edad" class="col-form-label">Edad:</label>
-                <input type="number" class="form-control" id="edad">
+                    <label for="apMat" class="col-form-label">Apellido Materno:</label>
+                    <input type="text" class="form-control" id="apMat">
+                </div>
+                <div class="form-group">
+                    <label for="nacimiento" class="col-form-label">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="nss" class="col-form-label">Apellido Materno:</label>
+                    <input type="text" class="form-control" id="nss">
+                </div>
+                <div class="form-group">
+                    <label for="usuario" class="col-form-label">Usuario:</label>
+                    <input type="text" class="form-control" id="usuario">
+                </div>
+                <div class="form-group">
+                    <label for="contraseña" class="col-form-label">Contraseña:</label>
+                    <input type="text" class="form-control" id="contraseña">
+                </div>
+                <div class="form-group">
+                    <label for="tipo" class="col-form-label">Tipo de usuario:</label>
+                    <select name="tipo" class="form-control" id="tipo" require>
+                        <option selected value="">Selecciona un valor</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
                 </div>            
             </div>
             <div class="modal-footer">

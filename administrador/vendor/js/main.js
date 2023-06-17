@@ -27,11 +27,29 @@ $(document).ready(function(){
     
     $("#btnNuevo").click(function(){
         $("#formPersonas").trigger("reset");
-        $(".modal-header").css("background-color", "#18d3f9");
+        $(".modal-header").css("background-color", "#3A61D0");
         $(".modal-header").css("color", "white");
         $(".modal-title").text("Nuevo Usuario");            
         $("#modalCRUD").modal("show");        
         id=null;
         opcion = 1; //alta
+    });
+
+    var fila;
+
+    //boton Editar
+    $(document).on("click", ".btnEditar", function(){
+        fila = $(this).closest("tr");
+        id = parseInt(fila.find('td:eq(0)').text());
+        nombre = fila.find('td:eq(1)').text();
+        //aPat = fila.find('td:eq(2)').txt();
+        
+        $("#nombre").val(nombre);
+        //$("#apPat").val(aPat);
+
+        $(".modal-header").css("background-color", "#3A61D0");
+        $(".modal-header").css("color", "white");
+        $(".modal-title").text("Editar usuario");            
+        $("#modalCRUD").modal("show");
     });
 });

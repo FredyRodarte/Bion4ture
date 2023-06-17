@@ -1,3 +1,15 @@
+<?php
+    if(isset($_GET['error'])){
+
+        if ($_GET['error']==1){
+            $mensaje="<p>Ingresa tu usuario y contraseña</p>";
+        }
+
+        if ($_GET['error']==2){
+            $mensaje="<p>Usuario y/o Contraseña incorrectos.</p>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,7 +27,7 @@
         <div class="container">
             <div class="row align-self-center">
                 <div class="col-6" id="formulario">
-                    <form action="" method="get">
+                    <form action="bd/inicio_sesion.php" method="post">
                         <div id="titulo-form">
                             <img src="vendor/img/logo.png" alt="">
                             <h3>BioN4ture</h3>
@@ -24,10 +36,16 @@
                             <label for="usuario"><i class="fa-solid fa-user"></i> Usuario:</label>
                             <input type="text" name="usuario" class="form-control">
                             <label for="contraseña"><i class="fa-solid fa-key"></i> Constraseña:</label>
-                            <input type="password" class="form-control">
+                            <input type="password" name="pass" class="form-control">
 
                         </div>
                         <div id="texto">
+                            <?php
+                                if(isset($mensaje))
+                                {
+                                  echo $mensaje;
+                                }
+                            ?>
                         </div>
                         <div id="botones">
                             <button type="submit" class="btn btn-light">Iniciar Sesion</button>
@@ -37,8 +55,8 @@
             </div>
         </div>
         <!-- Bootstrap y JQuery-->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-3.6.4.min.js"></script>
+        <script src="vendor/js/bootstrap.min.js"></script>
+        <script src="vendor/js/jquery-3.6.4.min.js"></script>
         <!-- Iconos -->
         <script src="https://kit.fontawesome.com/e777ccecfb.js" crossorigin="anonymous"></script>
     </body>

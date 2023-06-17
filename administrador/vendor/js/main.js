@@ -5,7 +5,7 @@ $(document).ready(function(){
        "columnDefs":[{
         "targets": -1,
         "data":null,
-        "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar'>Editar</button><button class='btn btn-danger btnBorrar'>Borrar</button></div></div>"  
+        "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar' title='Editar'><i class='fa-solid fa-pencil'></i></button><button class='btn btn-danger btnBorrar' title='Borrar'><i class='fa-solid fa-trash-can'></i></button></div></div>"  
        }],
         
     "language": {
@@ -27,9 +27,9 @@ $(document).ready(function(){
     
     $("#btnNuevo").click(function(){
         $("#formPersonas").trigger("reset");
-        $(".modal-header").css("background-color", "#1cc88a");
+        $(".modal-header").css("background-color", "#18d3f9");
         $(".modal-header").css("color", "white");
-        $(".modal-title").text("Nueva Persona");            
+        $(".modal-title").text("Nuevo Usuario");            
         $("#modalCRUD").modal("show");        
         id=null;
         opcion = 1; //alta

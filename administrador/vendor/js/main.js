@@ -42,7 +42,7 @@ $(document).ready(function(){
         fila = $(this).closest("tr");
         id = parseInt(fila.find('td:eq(0)').text());
         nombre = fila.find('td:eq(1)').text();
-        //aPat = fila.find('td:eq(2)').txt();
+        paterno = fila.find('td:eq(2)').text();
         
         $("#nombre").val(nombre);
         //$("#apPat").val(aPat);

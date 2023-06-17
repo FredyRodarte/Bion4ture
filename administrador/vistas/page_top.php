@@ -79,7 +79,7 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="registrar.php">
         <i class="fa-solid fa-cash-register"></i>
         <span>Registrar venta</span></a>
       </li>

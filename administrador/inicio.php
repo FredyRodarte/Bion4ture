@@ -46,7 +46,7 @@
     
   </tr>
     <td style="text-align:center">El regalo perfecto para Mama.</td>
-    <td style="text-align:center">Se parte de nosotros y unete <br> a nuestra comunidad de provedores.</td>
+    <td style="text-align:center">Se parte de nosotros y unete <br> a nuestra comunidad de distribuidores.</td>
     <tr>
         <td></td>
         <td style="text-align:center"><a href="#" data-toggle="modal" data-target="#info">Mas info aqui!</a></td>

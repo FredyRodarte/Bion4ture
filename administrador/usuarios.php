@@ -91,7 +91,7 @@
                     <input type="date" class="form-control" id="nacimiento">
                 </div>
                 <div class="form-group">
-                    <label for="nss" class="col-form-label">Apellido Materno:</label>
+                    <label for="nss" class="col-form-label">Numero de Seguro Social:</label>
                     <input type="text" class="form-control" id="nss">
                 </div>
                 <div class="form-group">

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("cargamos documento");
+    //console.log("cargamos documento");
 
     tablaPersonas = $("#tablaPersonas").DataTable({
        "columnDefs":[{
@@ -35,7 +35,7 @@ $(document).ready(function(){
         opcion = 1; //alta
     });
 
-    var fila;
+    var fila; //capturar la fial para editar o borrar el registro
 
     //boton Editar
     $(document).on("click", ".btnEditar", function(){
@@ -43,13 +43,41 @@ $(document).ready(function(){
         id = parseInt(fila.find('td:eq(0)').text());
         nombre = fila.find('td:eq(1)').text();
         paterno = fila.find('td:eq(2)').text();
-        
+        materno = fila.find('td:eq(3)').text();
+        fecha = fila.find('td:eq(4)').text();
+        seguro = fila.find('td:eq(5)').text();
+        usuario = fila.find('td:eq(6)').text();
+        pass = fila.find('td:eq(7)').text();
+        userTipo = fila.find('td:eq(8)').text();
+
+
         $("#nombre").val(nombre);
-        //$("#apPat").val(aPat);
+        $("#apPat").val(paterno);
+        $("#apMat").val(materno);
+        $("#nacimiento").val(fecha);
+        $("#nss").val(seguro);
+        $("#usuario").val(usuario);
+        $("#contraseña").val(pass);
+        $("#tipo").val(userTipo);
+        opcion = 2; //editar
 
         $(".modal-header").css("background-color", "#3A61D0");
         $(".modal-header").css("color", "white");
         $(".modal-title").text("Editar usuario");            
         $("#modalCRUD").modal("show");
+    });
+
+    //boton Borrar
+    $(document).on("click",".btnBorrar",function(){
+        fila = $(this).closest("tr");
+        id = parseInt(fila.find('td:eq(0)').text());
+        nombre = fila.find('td:eq(1)').text();
+        paterno = fila.find('td:eq(2)').text();
+        opcion = 3 //borrar
+        var respuesta = confirm("¿Estas seguro de eliminar el registro de: "+nombre+" "+paterno+"?");
+
+        /*if(respuesta){
+
+        }*/
     });
 });

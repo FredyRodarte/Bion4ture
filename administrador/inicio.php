@@ -20,13 +20,43 @@
                 <hr>
             </div> 
             <div class="col-lg-12">
-                <img src="vendor/img/jb5.jpg" alt="" >
+                  
+                <figcaption>
+                    <br>
                 
+                </figcaption>
+                <table style="width:100%">
+  <tr>
+    
+    
+  </tr>
+  <tr>
+    <td style="text-align:center"><img src="vendor/img/jb.jpg" alt=""style="width:400px;height:300px; padding: 30px;"></td>
+    <td style="text-align:center"><img src="vendor/img/jb3.jpg" alt="" style="width:400px;height:300px; padding: 30px;"></td>
+    
+  </tr>
+  <tr>
+    <td style="text-align:center">Jabones 100% de ingredientes naturales.</td>
+    <td style="text-align:center">Gran variedad de productos.</td>
+    
+  </tr>
+  <tr>
+    <td style="text-align:center"><img src='vendor/img/jb4.jpg' alt='' style= "width:400px;height:300px; padding: 30px;"> </td>
+    <td style="text-align:center"><img src='vendor/img/jb5.jpg' alt='' style=" width:400px;height:300px; padding: 30px;"> </td>
+    
+  </tr>
+    <td style="text-align:center">El regalo perfecto para Mama.</td>
+    <td style="text-align:center">Se parte de nosotros y unete <br> a nuestra comunidad de provedores.</td>
+    <tr>
+        <td></td>
+        <td style="text-align:center"><a href="#" data-toggle="modal" data-target="#info">Mas info aqui!</a></td>
+    </tr>
+</table>
             </div> 
             
         </div>    
 </div>    
     <br>  
-   
+
 <!--FIN del cont principal-->
 <?php require_once "vistas/page_down.php"?>

@@ -80,4 +80,39 @@ $(document).ready(function(){
 
         }*/
     });
+
+    //Enviar datos nuevo usuario y editar usuario
+    $("#formPersonas").submit(function(e){
+        e.preventDefault();
+        nombre = $.trim($("#nombre").val());
+        paterno = $.trim($("#apPat").val());
+        materno = $.trim($("#apPat").val());
+        fecha = $.trim($("#nacimiento").val());
+        seguro = $.trim($("#nss").val());
+        user = $.trim($("#usuario").val());
+        pass = $.trim($("#contraseña").val());
+        userTipo = $.trim($("#tipo").val());
+
+        $.ajax({
+            url: "bd/crudUsuario.php",
+            type: "POST",
+            dataType: "json",
+            data: {nombre:nombre,paterno:paterno,materno:materno,fecha:fecha,seguro:seguro,usuario:user,pass:pass,userTipo:userTipo,id:id,opcion:opcion},
+            succes: function(data){
+                console.log(data);
+                nombre = data[0].nombre;
+                paterno = data[0].paterno;
+                materno = data[0].materno;
+                fecha = data[0].fecha;
+                seguro = data[0].seguro;
+                user = data[0].user;
+                pass = data[0].pass;
+                userTipo = data[0].userTipo;
+                
+                if(opcion == 1){tablaPersonas.row.add([id,nombre,paterno,materno,fecha,seguro,user,pass,userTipo]).draw();}
+                else{tablaPersonas.row(fila).data([id,nombre,paterno,materno,fecha,seguro,user,pass,userTipo]).draw();}
+            }
+        });
+        $("#modalCRUD").modal("hide");
+    });
 });

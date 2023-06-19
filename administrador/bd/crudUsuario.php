@@ -35,6 +35,12 @@
             $resultado = $pdo->query($consulta);
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
+        case 3:
+            $consulta = "DELETE FROM usuarios WHERE id_usuario='$id'";
+            $resultado = $pdo->query($consulta);
+            break;
 
     }
+
+    print json_encode($data, JSON_UNESCAPED_UNICODE);
 ?>

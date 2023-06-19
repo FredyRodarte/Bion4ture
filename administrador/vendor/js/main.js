@@ -76,9 +76,17 @@ $(document).ready(function(){
         opcion = 3 //borrar
         var respuesta = confirm("¿Estas seguro de eliminar el registro de: "+nombre+" "+paterno+"?");
 
-        /*if(respuesta){
-
-        }*/
+        if(respuesta){
+            $.ajax({
+                url:"bd/crudUsuario.php",
+                type:"POST",
+                dataType:"json",
+                data:{opcion:opcion, id:id},
+                success: function(){
+                    tablaPersonas.row(fila.parents('tr')).remove().draw();
+                }
+            });
+        }
     });
 
     //Enviar datos nuevo usuario y editar usuario

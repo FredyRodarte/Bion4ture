@@ -57,7 +57,7 @@ function agregarProducto(id, nombre, precio) {
                     }
                 });
                 alert("Pago procesado correctamente.");
-                //location.reload();
+                location.reload();
             }
         } else {
             alert("No hay productos en el carrito.");
@@ -68,6 +68,7 @@ function agregarProducto(id, nombre, precio) {
         let tablaCarrito = document.getElementById("carrito"); //extrae la tabla carrito
         let filas = tablaCarrito.getElementsByTagName("tr"); //extra todas las filas de la tabla
         var venta = [];
+        var folio = crearFolio();
 
         //iterar sobre las filas excluyendo la ultima columna
         for (var i = 1; i < filas.length; i++) {
@@ -80,9 +81,29 @@ function agregarProducto(id, nombre, precio) {
             var cantidad = parseInt(celdas[2].textContent);
             var subtotal = parseInt(celdas[3].textContent);
 
-            var registro = {nombre:producto,precio:precio,cantidad,cantidad,subtotal:subtotal};
+            var fecha = crearFecha();
+
+            var registro = {folio:folio,nombre:producto,precio:precio,cantidad,cantidad,subtotal:subtotal,fecha:fecha};
             venta.push(registro);
         }
         return venta;
         //console.log(venta);
+    }
+
+    function crearFecha(){
+        var fecha = new Date();
+
+        var year = fecha.getFullYear();
+        var month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+        var day = ("0" + fecha.getDate()).slice(-2);
+
+        var fechaSQL = year+"-"+month+"-"+day;
+
+        return fechaSQL;
+    }
+
+    function crearFolio(){
+        var randomNumber = Math.floor(Math.random()*9000)+1000;
+        var folio = "VENTA"+randomNumber;
+        return folio;
     }

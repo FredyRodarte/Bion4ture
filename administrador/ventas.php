@@ -1,87 +1,72 @@
 <?php require_once "vistas/page_top.php"?>
 
 <!--INICIO del cont principal-->
-<div class="container">
-    <h1>Contenido principal</h1>
+<div class="container p-3 my-3 border">
+    
 
-<div class="container">
-        <div class="row">
-            <div class="col-lg-12">            
-            <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo</button>    
-            </div>    
-        </div>    
-    </div>    
-    <br>  
-<div class="container">
-        <div class="row">
-                <div class="col-lg-12">
-                    <div class="table-responsive">        
-                        <table id="tablaPersonas" class="table table-striped table-bordered table-condensed" style="width:100%">
-                        <thead class="text-center">
-                            <tr>
-                                <th>Id</th>
-                                <th>Nombre</th>
-                                <th>País</th>                                
-                                <th>Edad</th>  
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php                            
-                            foreach($data as $dat) {                                                        
-                            ?>
-                            <tr>
-                                <td><?php echo $dat['id'] ?></td>
-                                <td><?php echo $dat['nombre'] ?></td>
-                                <td><?php echo $dat['pais'] ?></td>
-                                <td><?php echo $dat['edad'] ?></td>    
-                                <td></td>
-                            </tr>
-                            <?php
-                                }
-                            ?>                                
-                        </tbody>        
-                       </table>                    
-                    </div>
-                </div>
-        </div>  
-    </div>    
+
+
+
+  <h2>Registro de Ventas</h2>
+
+  <form class="form-inline" action="/action_page.php">
+    <label for="folio" class="mb-2 mr-sm-2">Folio de Venta:</label>
+    <input type="text" class="form-control mb-2 mr-sm-5" id="folio" name="folio">
+    <label for="pwd2" class="mb-2 mr-sm-2">Fecha de Venta:</label>
+    <input type="date" class="form-control mb-2 mr-sm-5" id="fecha" name="fecha">
+    <div class="form-check mb-2 mr-sm-2">
       
-<!--Modal para CRUD-->
-<div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        <form id="formPersonas">    
-            <div class="modal-body">
-                <div class="form-group">
-                <label for="nombre" class="col-form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre">
-                </div>
-                <div class="form-group">
-                <label for="pais" class="col-form-label">País:</label>
-                <input type="text" class="form-control" id="pais">
-                </div>                
-                <div class="form-group">
-                <label for="edad" class="col-form-label">Edad:</label>
-                <input type="number" class="form-control" id="edad">
-                </div>            
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-                <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
-            </div>
-        </form>    
-        </div>
-    </div>
-</div>  
-      
-    
-    
+    </div>    
+    <button type="submit" class="btn btn-primary mb-2 ">Consultar</button>
+  </form>
 </div>
+<div class="container p-3 my-3 border">
+  
+
+  <!-- ... Resto del código del formulario ... -->
+
+  <!-- Agrega la tabla aquí -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="text-align:center">Foilio</th>
+        <th style="text-align:center">Nombre</th>
+        <th style="text-align:center">Cantidad</th>
+        <th style="text-align:center">Precio</th>
+        <th style="text-align:center">Fecha</th>
+        <!-- Agrega más encabezados de columna según tus necesidades -->
+      </tr>
+    </thead>
+    <tbody>
+        <td style="text-align:center">00001</td>
+        <td style="text-align:center">Jabon de Azufre</td>
+        <td style="text-align:center">100</td>
+        <td style="text-align:center">$1500.00</td>
+        <td style="text-align:center" class="date" type="date">12/06/2023</td>
+        <tr></tr>
+    
+    </tbody>
+  </table>
+
+
+
+</div>
+<form>
+  <fieldset disabled>
+    
+    <div class="container mb-3">
+      <h4>
+        Total Ventas: 
+      </h4>
+      <input type="text" id="disabledTextInput" class="form-control" style="padding:40px;" placeholder="Aqui va el contenido de la tabla">
+    </div>
+  </fieldset>
+</form>
+
+
+
+    
+    
+
 <!--FIN del cont principal-->
 <?php require_once "vistas/page_down.php"?>

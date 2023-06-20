@@ -37,18 +37,50 @@
         console.log(total);
     }
     
+    
+    
     function pagar() {
-        let total = parseFloat(document.getElementById("total").textContent);
-        if (total > 0.0) {
-            if (confirm("¿Desea procesar el pago por $" + total.toFixed(2) + "?")) {
-                // Aquí se podría enviar el registro de ventas a la base de datos mediante una petición AJAX
-                alert("Pago procesado correctamente.");
-                location.reload();
-            }
-        } else {
-            alert("No hay productos en el carrito.");
+    let total = parseFloat(document.getElementById("total").textContent);
+    if (total > 0.0) {
+        if (confirm("¿Desea procesar el pago por $" + total.toFixed(2) + "?")) {
+            // Obtener los datos del carrito de compras
+            let carrito = [];
+            let filas = document.querySelectorAll("#carrito tbody tr");
+            filas.forEach(function(fila) {
+                let producto = fila.children[0].textContent;
+                let precio = parseFloat(fila.children[1].textContent);
+                let cantidad = parseInt(fila.children[2].textContent);
+                let subtotal = parseFloat(fila.children[3].textContent);
+
+                carrito.push({
+                    producto: producto,
+                    precio: precio,
+                    cantidad: cantidad,
+                    subtotal: subtotal
+                });
+            });
+
+            // Enviar los datos del carrito de compras al servidor mediante AJAX
+            $.ajax({
+                url: "registro_venta.php", // Ruta a la página PHP que procesará la solicitud
+                type: "POST",
+                data: { carrito: carrito }, // Enviar los datos del carrito como un objeto JSON
+                success: function(response) {
+                    alert("Pago procesado correctamente.");
+                    location.reload();
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                    alert("Error al procesar el pago.");
+                }
+            });
         }
+    } else {
+        alert("No hay productos en el carrito.");
     }
+}
+    
+
 </script>
 <div class="container">
     <h1><img src='vendor/img/logo1.png' alt=''>BioN4ture</h1>

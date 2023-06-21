@@ -57,7 +57,7 @@ function agregarProducto(id, nombre, precio) {
                     }
                 });
                 alert("Pago procesado correctamente.");
-                location.reload();
+                //location.reload();
             }
         } else {
             alert("No hay productos en el carrito.");

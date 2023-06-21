@@ -10,6 +10,7 @@
     }
 
     foreach ($datos as $registro){
+        
         $folio = $registro['folio'];
         $producto = $registro['nombre'];
         $precio = $registro['precio'];
